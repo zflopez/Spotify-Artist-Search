@@ -1,11 +1,3 @@
-/*function makeRequest(spotifyurl, jsonType, successFunction) {
-	$.ajax({
-		url: spotifyurl,
-		dataType: jsonType,
-		success: successFunction,
-	});
-}; */
-
 function loadData() {	
 	$.ajax({
 		url: "js/json/data.jsonp",
@@ -34,13 +26,17 @@ function checkuser(userArray) {
 	for(var i = 0; i < userArray.length; i++) {
 		if(username === userArray[i].user && pass === userArray[i].password) {
 			window.open("logged.html", "_self");
+		} /*else {
+			alert("Enter a correct Username/Password");
 		}
-	}	
+		if (!username || !pass) {
+			alert("Enter a correct Username/Password");
+		}*/
+	}
+	$('.username').val("");	
+	$('.password').val("");
 }
 
 $(document).ready(function() {
 	$('.send').on('click', loadData);
 })
-
-
-

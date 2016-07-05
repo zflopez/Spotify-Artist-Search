@@ -1,0 +1,124 @@
+body {
+	background-color: black;
+}
+
+.spotifyBanner {
+	margin:30% auto;
+	text-align: center; 
+}
+
+.username, .password, .artistSearch {
+	width: 280px;
+	height: 39px;
+	border-radius: 5px;
+	margin-bottom: 12px;
+	padding-left: 0.5em;
+}
+
+.send {
+	margin-top: 12px;
+	text-align: center;
+	height: 39px;
+	background-color: green; 
+}
+
+.logo a {
+	padding: 1px;
+}
+
+.searchForm {
+	margin: 5% auto;
+	text-align: center;
+	margin-bottom: 5em;
+}
+
+.searchForm h1 {
+	color: white;
+	margin-bottom: 1em;
+}
+
+.search {
+	text-align: center;
+	height: 39px;
+	background-color: green;
+	margin-left: 1em;
+}
+
+.artistsResults {
+	text-align: center;
+}
+
+.artistsResults ul {
+	list-style: none;
+}
+
+.artistsResults li {
+	margin-bottom: 2em;
+	width: 200px;
+	margin-right: 1em;
+	cursor: pointer;
+}
+
+.artistName {
+	font-size: 18px;
+	color: white;
+	font-weight: bold;
+}
+
+
+.album-list {
+	text-align: center;
+	font-weight: bold;
+}
+
+.list-album-item {
+	width: 200px;
+	margin-right: 2em;
+	margin-bottom: 1em;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.album p {
+	color: white;
+	font-weight: bold;
+	margin-top: 2em;
+}
+
+.albumCover {
+	cursor: pointer;
+}
+
+.container-album {
+	color: white;
+}
+
+.tracklist {
+	margin-top: 2em;
+}
+
+
+.glyphicon-plus {
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+footer {
+	text-align: center;
+	margin-top: 2em;
+}

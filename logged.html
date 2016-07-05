@@ -2,23 +2,82 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Spotify Search</title>
+	<title>Spotify Artist Search</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="js/jquery-2.2.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/stylesheet.css">
-</head>
-<body style="background-color: grey">
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico" />
 
-	<div class="container">
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="#" class="logo"><img height="50px" src="img/spotiWhite.png"></a>
+			</div>	
+		</div>
+	</nav>
+
+	<div class="container searchForm">
+		<h1>Search for an Artist</h1>
 		<input class="artistSearch" type="text" placeholder="Enter an artist">
-	    <button class="search btn btn-primary" type="button">Search an artist</button>
+		<button class="search btn btn-primary" type="button">Search
+			<span class="glyphicon glyphicon-search" style="margin-left: 0.3em;"></span>
+		</button>
 	</div>
 
-	<div class="container-album"></div>
+	<div class="container-fluid artistsResults">
+		<ul class="list-inline"></ul>
+	</div>
 
+
+	<div class="modal fade albumsModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-albums-title"><span class="glyphicon glyphicon-music"></span> Albums:</h4>
+				</div>
+				<div class="modal-body">
+					<ul class="album-list list-inline">            
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>        
+		</div>
+	</div>
+
+	<div class="modal fade tracksModal" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-tracks-title"><span class="glyphicon glyphicon-music"></span> Tracks:</h4>
+				</div>
+				<div class="modal-body">
+					<ol class="tracklist">            
+					</ol>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>        
+		</div>
+	</div>
+
+	<footer>
+		<p>All product names are trademarks or registered trademarks of their respective owners. © 2016 Geners Present</p>	
+	</footer>
 
 	<script src="js/logged.js"></script>
-	
+
 </body>
 </html>
