@@ -55,7 +55,7 @@ body {
 .artistsResults li {
 	margin-bottom: 2em;
 	width: 200px;
-	margin-right: 1em;
+	margin-right: 2em;
 	cursor: pointer;
 }
 
@@ -64,7 +64,6 @@ body {
 	color: white;
 	font-weight: bold;
 }
-
 
 .album-list {
 	text-align: center;
@@ -78,31 +77,29 @@ body {
 	cursor: pointer;
 }
 
-
-
-
-
-
-
-
-.album p {
-	color: white;
-	font-weight: bold;
-	margin-top: 2em;
+.list-track-item {
+	padding: 1em;
 }
 
-.albumCover {
-	cursor: pointer;
+.btn-circle {
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	padding: 6px 0;
+	line-height: 1.42;
+	border-radius: 15px;
+	float: right;
 }
 
-.container-album {
-	color: white;
+
+.modal {
+	overflow-y: auto;
+	height: auto;	
 }
 
-.tracklist {
-	margin-top: 2em;
+.player {
+	text-align: center;
 }
-
 
 .glyphicon-plus {
 	cursor: pointer;

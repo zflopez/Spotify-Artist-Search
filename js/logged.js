@@ -110,17 +110,58 @@ $(document).ready(function(){
 			addTrack(track);
 		});
 		$(".tracksModal").modal();
+		$(".albumsModal").modal("hide");
 	}
 
 	function addTrack(track){
 		var name = track.name;
 		var singleUrl = track.preview_url;
-		$('.tracklist').append("<li class='list-track-item' id='"
-			+ track.id + "'>" + "<a href='" + singleUrl + "'> "	
-			+ name + " </a><span class='glyphicon glyphicon-plus'> </span></li>");		
+		var htmlTrack = "<li class='list-track-item' id='"
+		+ track.id + "'><a class='list-track-name' href='#'> " + name 
+		+ " </a><a href='#'' class='btn btn-default btn-circle'><span class='glyphicon glyphicon-plus'></span></a></li>"
+		$(".tracklist").append(htmlTrack);	
+
+
+		$(".list-track-name").on("click", function() {
+			//$(".player").empty();
+
+			var iframe = $('iframe').attr("src", "https://embed.spotify.com/?uri=" + track.uri);
+
+			$(".player").append(iframe);
+
+			
+			$(".playerModal").modal();
+			$(".tracksModal").modal("hide");
+
+			
+			//"<a href='" + singleUrl + "'> " + name + " </a>";
+		});
+
+
+		$(".btn-circle").on("click", function() {
+			var playlist = JSON.parse(window.localStorage.getItem("playlist")) || {};
+
+			playlist[$(this).parent()];
+
+			window.localStorage.setItem("playlist", JSON.stringify(playlist));
+		});
+
+
+
+
+
+
+
+
 	}
 
 
+	
+
+	function playlist(songs) {
+		$("playlistModal").modal();
+	}
+	
 
 
 
